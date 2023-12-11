@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Roboto:wght@300;400;700&display=swap')
+@import './variables'
+
+::selection
+  color: white
+  background: $primary-color
+
+body
+  margin: 0
+  padding: 0
+  padding-top: 165px
+  font-family: 'Fira Code', monospace
+  font-family: 'Roboto', sans-serif
+
+h1, p
+  margin: 0
+
+p
+  font-size: 16px
+  font-weight: 300
+  line-height: 25px
+
+a
+  text-decoration: none
+  color: inherit
+.container
+  width: 100%
+  max-width: $screen-xl
+  padding: 0 15px
+  box-sizing: border-box
+  margin: auto
+
+  @media (max-width: $screen-xl)
+    max-width: $screen-l
+
+  @media (max-width: $screen-l)
+    max-width: $screen-m
+
+  @media (max-width: $screen-m)
+    max-width: $screen-s

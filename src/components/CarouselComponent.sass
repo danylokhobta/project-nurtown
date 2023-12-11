@@ -1,0 +1,61 @@
+@import '../variables'
+.CarouselComponent
+  user-select: none
+  display: flex
+  flex-wrap: wrap
+  .carousel-container
+    min-width: 0
+    max-width: 100%
+    .carousel-item
+      .photo-grid
+        width: 100%
+        display: grid
+        justify-content: space-around
+        grid-template-columns: repeat(auto-fill, minmax(15%, auto))
+        gap: 30px
+        .photo
+          img
+            width: 100%
+            height: 100%
+
+      .LinkButton
+        position: absolute
+        bottom: 0
+        left: 0
+        display: none
+        &.active
+          display: true
+
+  .custom-pagination
+    font-size: 24px
+    color: $light-gray-3
+    font-weight: 400
+    display: flex
+    align-items: center
+    .slash
+      background-color: $light-gray-4
+      margin: 0 32px
+      width: 44px
+      height: 2px
+      rotate: -45deg
+
+  .custom-navigation
+    width: 100%
+    display: flex
+    align-items: center
+    gap: 12px
+    button
+      background-color: white
+      border: 1px solid $light-gray-2
+      cursor: pointer
+      outline: inherit
+      padding: 14px    
+      &:hover
+        background-color: $light-gray-1
+      img
+        width: 24px
+        height: 24px
+        margin-bottom: -4px
+      &:nth-child(1)
+        img
+          rotate: 180deg

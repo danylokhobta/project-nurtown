@@ -1,0 +1,117 @@
+@import '../variables'
+$items-gap: 55px
+.Navbar
+  user-select: none
+  position: fixed
+  width: 100%
+  left: 0
+  top: 0
+  z-index: 10
+  padding: 40px 0
+  backdrop-filter: blur(33px)
+  background-color: rgba(255, 255, 255, 0.5)
+  z-index: 10
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    column-gap: $items-gap
+
+    .Navbar-menu
+      list-style: none
+      padding: 0
+      margin: 0
+      display: flex
+      column-gap: $items-gap
+      transition: $duration $timing-function
+
+      li
+        a
+          padding: 4px 15px
+          border: 1px solid transparent
+          border-right: 0
+          border-left: 0
+          font-size: 12px
+          font-weight: 500
+          letter-spacing: 2.4px
+          text-decoration: none
+          color: $gray-color
+          transition: $duration $timing-function
+
+          &:hover
+            border-top-color: $primary-color
+            border-bottom-color: $gray-color
+          
+
+// Styling for the menu icon
+.Navbar-toggle
+  width:20px
+  height:20px
+  position: relative
+  display: none
+  flex-direction: column
+  cursor: pointer
+
+  .bar
+    width: 20px
+    height: 1px
+    background-color: white
+    margin: 3px 0
+    transition: calc( $duration * 2 )
+
+
+@media screen and (max-width: $screen-xl)
+  .Navbar
+    column-gap: calc( $items-gap - 40px ) !important
+
+    .Navbar-menu
+      column-gap: calc( $items-gap - 40px ) !important
+
+@media screen and (max-width: $screen-l)
+  .Navbar
+    column-gap: calc( $items-gap - 50px ) !important
+
+    .Navbar-menu
+      column-gap: calc( $items-gap - 50px ) !important
+
+@media screen and (max-width: $screen-m)
+  .Navbar
+    padding: 30px 0
+    .container
+      flex-wrap: wrap
+      .Navbar-menu
+        position: relative
+        height: 0
+        width: 100%
+        overflow: hidden
+
+        flex-direction: column
+        justify-content: center
+        
+        li
+          width: 100%
+          padding: 20px 0
+          text-align: center
+          a
+            font-size: 24px
+            letter-spacing: 4.8px
+      .Navbar-toggle
+        display: flex
+        .bar
+          background-color: $gray-color
+
+    &.active
+      .container
+        .Navbar-menu
+          height: calc( 100vh - 110px )
+        .Navbar-toggle
+          .bar
+            position: absolute
+            top: 5px
+            &:nth-child(1)
+              rotate: 45deg
+            &:nth-child(2)
+              width: 0
+            &:nth-child(3)
+              rotate: -45deg

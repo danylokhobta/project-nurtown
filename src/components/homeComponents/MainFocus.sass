@@ -1,0 +1,57 @@
+@import "../../_variables"
+.MainFocus
+  .Title
+    margin-bottom: 60px
+  .content
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 187px
+    article
+      display: flex
+      gap: 30px
+      p:nth-child(1)
+        user-select: none
+        color: $light-gray-2
+        font-weight: 600
+        font-size: 200px
+        line-height: 140px
+      p:nth-child(2)
+        color: $gray-color
+        font-size: 22px
+        line-height: 36px
+        font-weight: 500
+
+@media screen and (max-width: $screen-xl)
+  .MainFocus
+    .content
+      padding: 0 5px
+      column-gap: 100px !important
+      article
+        gap: 20px
+        p:nth-child(2)
+          font-size: 20px
+          line-height: 32px
+
+@media screen and (max-width: $screen-l)
+  .MainFocus
+    .Title
+      margin-bottom: 40px
+    .content
+      padding: 0 0
+      grid-template-columns: repeat(1, 1fr)
+      row-gap: 40px
+      article
+        max-width: 500px
+        gap: 30px
+
+@media screen and (max-width: $screen-s)
+  .MainFocus
+    .content
+      article
+        p:nth-child(1)
+          font-weight: 600
+          font-size: 160px
+          line-height: 120px
+        p:nth-child(2)
+          font-size: 16px
+          line-height: 28px

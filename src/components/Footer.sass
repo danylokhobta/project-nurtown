@@ -1,0 +1,86 @@
+@import "../_variables"
+
+footer
+  width: 100%
+  background-color: $gray-color
+  color: white
+  margin-top: 120px
+  .container
+    padding-top: 60px
+    padding-bottom: 60px
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    gap: 20px
+    article
+      p
+        width: 100%
+        font-size: 16px
+        font-weight: 700
+      ul
+        list-style: none
+        padding: 0
+        margin: 0
+        li
+          margin-top: 16px
+          font-size: 14px
+          font-weight: 400
+          img
+            width: 15px
+            height: 15px
+      a
+        transition: $duration $timing-function
+        user-select: none
+        &:hover
+          opacity: 0.7
+
+      img
+        user-select: none
+      
+    .column-3
+      ul
+        li
+          display: flex
+          flex-wrap: nowrap
+          align-items: center
+          gap: 20px
+          p
+            font-weight: 400
+    
+    .column-4
+      display: flex
+      flex-wrap: wrap
+      align-content: flex-start
+      align-items: center
+      column-gap: 40px
+      row-gap: 16px
+
+  .copywrite
+    user-select: none
+    width: 100%
+    text-align: center
+    padding: 30px 0
+    border-top: 1px solid $light-gray-3
+    opacity: 0.5
+      
+@media screen and ( max-width: $screen-l )
+  footer
+    .container
+      flex-wrap: wrap
+      row-gap: 40px
+      article
+        flex:0 0 45%
+      .column-1
+        display: none
+      .column-2
+        order: 1
+      .column-3
+        order: 2
+      .column-4
+        order: 4
+
+@media screen and ( max-width: $screen-s )
+  footer
+    .container
+      article
+        flex:0 0 100%

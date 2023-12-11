@@ -1,0 +1,28 @@
+@import "../_variables"
+.Contacts
+  .container
+    display: flex
+    column-gap: 170px
+    row-gap: 60px
+    .content
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      gap: 45px
+      .Title
+        margin-top: 60px
+      .LinkButton
+        img
+          display: none
+
+    iframe
+      width: 100%
+      border: 0
+@media screen and ( max-width: $screen-xl )
+  .container
+    column-gap: 60px
+  
+@media screen and ( max-width: $screen-l )
+  .container
+    flex-wrap: wrap
+  

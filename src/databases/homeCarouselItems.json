@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Slide 1",
+    "images": [
+      {
+        "imageSrc": "home/header.png",
+        "altText": "Item 1"
+      }
+    ],
+    "button": {
+      "title": "view projects",
+      "url": "/projects"
+    }
+  },
+  {
+    "title": "Slide 2",
+    "images": [
+      {
+        "imageSrc": "home/header.png",
+        "altText": "Item 1"
+      }
+    ],
+    "button": {
+      "title": "view projects",
+      "url": "/projects"
+    }
+  },
+  {
+    "title": "Slide 3",
+    "images": [
+      {
+        "imageSrc": "home/header.png",
+        "altText": "Item 1"
+      }
+    ],
+    "button": {
+      "title": "view projects",
+      "url": "/projects"
+    }
+  }
+]

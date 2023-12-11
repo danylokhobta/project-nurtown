@@ -1,0 +1,49 @@
+@import '../variables'
+
+.LinkButton
+  user-select: none
+  text-decoration: none
+  cursor: pointer
+  padding: 23.5px 35px
+  gap: 18px
+  align-items: center
+  display: none
+
+  &.dark
+    display: flex !important
+    background-color: $gray-color
+    color: white !important
+    .arrowDark
+      display: none
+  &.dark:hover
+    background-color: #383838
+
+  &.light
+    display: flex !important
+    background-color: white
+    color: $gray-color !important
+    .arrowLight
+      display: none
+  &.light:hover
+    background-color: $light-gray-1
+
+  &.transparent
+    display: flex !important
+    color: white !important
+    .arrowDark
+      display: none
+  p
+    font-size: 12px
+    letter-spacing: 2.4px
+    white-space: nowrap
+    
+  img
+    width: 24px
+    height: 24px
+
+@media screen and (max-width: $screen-xl)
+  .LinkButton
+    padding: 18px 27px
+@media screen and (max-width: $screen-m)
+  .LinkButton
+    padding: 16px 22px

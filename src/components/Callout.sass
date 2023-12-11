@@ -1,0 +1,44 @@
+@import "../_variables"
+.Callout
+  background-color: $light-gray-5
+  display: grid
+  grid-template-columns: 55% auto
+  .images
+    img
+      user-select: none
+      width: 100%
+
+  .content
+    padding: 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    gap: 30px
+    .Title
+      h1
+        font-size: 40px !important
+
+@media screen and (max-width: $screen-xl)
+  .Callout
+    .content
+      gap: 20px
+
+@media screen and (max-width: $screen-l)
+  .Callout
+    grid-template-columns: repeat(1, auto)
+    .images
+      order: 2
+    .content
+      order: 1
+
+@media screen and (max-width: $screen-m)
+  .Callout
+    padding: 30px 50px
+
+    .images
+      gap: 15px
+  
+@media screen and (max-width: $screen-s)
+  .Callout
+    padding: 25px 25px

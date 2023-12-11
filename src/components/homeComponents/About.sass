@@ -1,0 +1,48 @@
+@import "../../_variables"
+.About
+  padding: 30px 100px
+  background-color: $light-gray-5
+  display: grid
+  grid-template-columns: repeat(2, minmax(40%, auto))
+  gap: 30px
+  .images
+    column-count: 2
+    gap: 30px
+
+    img
+      user-select: none
+      width: 100%
+      &:nth-child(1)
+        margin-bottom: 30px
+
+  .text
+    display: flex
+    flex-wrap: wrap
+    align-content: flex-start
+    gap: 30px
+
+@media screen and (max-width: $screen-l)
+  .About
+    grid-template-columns: repeat(1, auto)
+    .images
+      order: 2
+    .text
+      order: 1
+
+@media screen and (max-width: $screen-m)
+  .About
+    padding: 30px 50px
+
+    .images
+      gap: 15px
+
+      img
+        &:nth-child(1)
+          margin-bottom: 15px
+
+    .text
+      gap: 30px
+  
+@media screen and (max-width: $screen-s)
+  .About
+    padding: 25px 25px
