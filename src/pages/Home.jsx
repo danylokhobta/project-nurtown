@@ -10,7 +10,7 @@ const database = [
     "title": "Slide 1",
     "images": [
       {
-        "imageSrc": "home/header.png",
+        "imageSrc": "images/home/header.png",
         "altText": "Item 1"
       }
     ],
@@ -23,7 +23,7 @@ const database = [
     "title": "Slide 2",
     "images": [
       {
-        "imageSrc": "home/header.png",
+        "imageSrc": "images/home/header.png",
         "altText": "Item 2"
       }
     ],
@@ -36,7 +36,7 @@ const database = [
     "title": "Slide 3",
     "images": [
       {
-        "imageSrc": "home/header.png",
+        "imageSrc": "images/home/header.png",
         "altText": "Item 3"
       }
     ],

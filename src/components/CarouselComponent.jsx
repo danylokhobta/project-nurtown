@@ -59,7 +59,7 @@ const CarouselComponent = ({ title, items, carContClassName, navContClassName, c
                 {slide.images.map((image, index) => {
                   return (
                     <div key={index} className="w-full">
-                      <img src={`/images/${image.imageSrc}`} alt={image.altText} className='w-full h-full' />
+                      <img src={image.imageSrc} alt={image.altText} className='w-full h-full' />
                     </div>
                   )
                 })}
