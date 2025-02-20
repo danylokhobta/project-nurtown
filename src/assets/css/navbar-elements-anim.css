@@ -1,0 +1,22 @@
+.menu {
+  transition: 0.2s;
+  &.active {
+    height: calc( 100vh - 110px );
+  }
+}
+.bar {
+  transition: 0.2s;
+  &.active {
+    position: absolute;
+    top: 5px;
+    &:nth-child(1) {
+      rotate: 45deg;
+    }
+    &:nth-child(2) {
+      width: 0;
+    }
+    &:nth-child(3) {
+      rotate: -45deg;
+    }
+  }
+}
